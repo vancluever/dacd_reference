@@ -1,0 +1,12 @@
+language: go
+sudo: required
+services:
+  - docker
+before_deploy:
+  - sudo scripts/install_terraform.sh
+deploy:
+  provider: script
+  script: scripts/run_travis_deploy.sh
+  on:
+    tags: true
+    repo: vancluever/dacd_reference

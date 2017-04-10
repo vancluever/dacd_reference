@@ -1,0 +1,1 @@
+alias dacd_toolbox='[ -z "$(docker ps -qa --filter=name=dacd_reference_toolbox)" ] && docker run -it --name dacd_reference_toolbox vancluever/dacd_reference_toolbox || docker start -ia dacd_reference_toolbox'
